@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:30px;
+}
+
+h2{
+    color: #00bb2d;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    letter-spacing: 4px;
+}
+
+h2::after{
+    content: ""
+}
+
+p{
+    text-align: center;
+}
+
+.galeria{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 75px 400px);
+    padding: 20px;
+    grid-gap: 20px;
+}
+
+.galeria2{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 75px 10px);
+    padding: 20px;
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.item{
+    border: 3px solid black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.item1{
+    background-color: grey;
+    text-align: center;
+    padding: 20px;
+}
+
+.item2{
+    background-image: url(Multimedia/multimoto.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    background-color: gray;
+}
+
+nav a {
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-transform: capitalize;
+    border-radius: 15px;
+}
+
+a {
+    font-size: 8px;
+    margin-bottom: 20px;
+}
+
+nav a:hover{
+    transform: scale(0.9);
+    background-color: white;
+    transition: 1.1s;
+    border-radius: 20px;
+}
+
+footer {
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+::-webkit-scrollbar{
+    background-color: #00bb2d;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white;
+}
+
+::-moz-scrollbar{
+    background-color: #00bb2d;
+}
+
+::-moz-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white;
+}
+
+::-ms-scrollbar{
+    background-color: #00bb2d;
+}
+
+::-ms-scrollbar-thumb{
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px white;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(1, 300px);
+    gap: 20px;
+}
+
+.item3{
+    background-image: url(Multimedia/paquete.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.item4{
+    background-image: url(Multimedia/motoCiudad.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item5{
+    background-image: url(Multimedia/motoReloj.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item6{
+    background-image: url(Multimedia/mercadoEnvios.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item7{
+    background-image: url(Multimedia/gba.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item8{
+    background-image: url(Multimedia/multimoto.png);
+    background-size: cover;
+    background-position: center;
+}
+
+@media only screen and (min-width:320px) {
+    .galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 75px 400px);
+    }
+
+    nav{
+        background-color: black;
+    }
+
+    nav a {
+        margin-right: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: grey;
+        padding: 5px 5px;
+        text-transform: capitalize;
+        border-radius: 15px;
+        display: grid;
+        place-items: center;
+    }
+    
+    a {
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #00bb2d;
+    }
+
+    footer div a{
+        font-size: 13px;
+        display: grid;
+        place-items: center;
+    }
+
+    footer div i{
+        font-size: 20px;
+    }
+}
+
+
+
+@media only screen and (min-width: 480px){
+    .galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 75px 400px);
+    }
+
+    nav a {
+        margin-right: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: grey;
+        padding: 5px 5px;
+        text-transform: capitalize;
+        border-radius: 15px;
+        display: grid;
+        place-items: center;
+    }
+    
+    a {
+        font-size: 10px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #00bb2d;
+    }
+
+    footer div a{
+        font-size: 13px;
+        display:inline;
+    }
+
+    footer div i{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .galeria{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 70px 400px);
+    }
+
+    nav {
+        background-color: grey;
+    }
+
+    nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        border-radius: 15px;
+        display:inline;
+    }
+    
+    a{
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #00bb2d;
+    }
+
+    footer div a{
+        font-size: 22px;
+        display:inline;
+    }
+}
