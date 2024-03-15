@@ -3,7 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:30px;
+}
+
+h1{
+    color: #00bb2d;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    letter-spacing: 4px;
 }
 
 h2{
@@ -22,15 +29,41 @@ p{
     text-align: center;
 }
 
+main {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    height: cover;
+    background-color: black;
+}
+
 .galeria{
-    width: 100%;
-    height: auto;
+    width: cover;
+    height: cover;
     background-color: black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(1, 75px 400px);
+    grid-template-rows: repeat(1, auto);
     padding: 20px;
     grid-gap: 20px;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50vh);
+    grid-template-rows: repeat(2, 40vh);
+    gap: 20px;
+    justify-content: center;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 60vh);
+    grid-template-rows: repeat(1, 60vh);
+    gap: 20px;
+    justify-content: center;
 }
 
 .galeria2{
@@ -39,7 +72,7 @@ p{
     background-color: black;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(1, 75px 10px);
+    grid-template-rows: repeat(1, auto);
     padding: 20px;
     grid-gap: 20px;
     text-align: center;
@@ -62,25 +95,28 @@ p{
 
 .item2{
     background-image: url(Multimedia/multimoto.png);
-    background-size: cover;
     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 nav {
     margin: 0 auto;
     padding: 0;
-    align-items: center;
     background-color: gray;
+    text-align: center;
 }
 
 nav a {
-    margin-right: 5px;
     text-decoration: none;
     color: white;
     background-color: black;
-    padding: 10px;
+    padding: 10px 20px;
     text-transform: capitalize;
     border-radius: 15px;
+    margin: 5px;
+    display: inline-block;
 }
 
 a {
@@ -91,7 +127,7 @@ a {
 nav a:hover{
     transform: scale(0.9);
     background-color: white;
-    transition: 1.1s;
+    transition: 0.5s;
     border-radius: 20px;
 }
 
@@ -101,7 +137,6 @@ footer {
     color: white;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
 }
 
 ::-webkit-scrollbar{
@@ -132,29 +167,6 @@ footer {
     background-color: black;
     border-radius: 10px;
     box-shadow: inset 0 0 5px white;
-}
-
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: black;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
-    grid-template-rows: repeat(2, 300px);
-    gap: 20px;
-}
-
-.grid-container2 {
-    display: grid;
-    grid-template-columns: repeat(2, 400px);
-    grid-template-rows: repeat(1, 300px);
-    gap: 20px;
 }
 
 .item3{
@@ -197,14 +209,16 @@ main {
     background-position: center;
 }
 
-@media only screen and (min-width:320px) {
+
+@media only screen and (max-width: 320px) {
+
     .galeria{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 75px 400px);
+        grid-template-columns: 1fr 1fr;
     }
 
     nav{
         background-color: black;
+        width: 100vh;
     }
 
     nav a {
@@ -220,12 +234,91 @@ main {
     }
     
     a {
-        font-size: 10px;
+        font-size: 4px;
         text-decoration: none;
     }
 
     a:hover{
         color: #00bb2d;
+    }
+
+    footer {
+        width: 100vh;
+    }
+
+    footer div a{
+        font-size: 6px;
+        display: grid;
+        place-items: center;
+    }
+
+    footer div i{
+        font-size: 8px;
+    }
+
+    header{
+        font-size: 8px;
+        width: 100vh;
+    }
+
+    h2 {
+        font-size: 8px;
+    }
+
+    main {
+        width: 100vh;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 50vh);
+        grid-template-rows: repeat(4, 40vh);
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(1, 60vh);
+        grid-template-rows: repeat(2, 60vh);
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width:321px) and (max-width: 480px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav{
+        background-color: black;
+        width: 100vh;
+    }
+
+    nav a {
+        margin-right: 5px;
+        text-decoration: none;
+        color: white;
+        background-color: grey;
+        padding: 5px 5px;
+        text-transform: capitalize;
+        border-radius: 15px;
+        display: grid;
+        place-items: center;
+    }
+    
+    a {
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #00bb2d;
+    }
+
+    footer {
+        width: 100vh;
     }
 
     footer div a{
@@ -235,16 +328,44 @@ main {
     }
 
     footer div i{
-        font-size: 20px;
+        font-size: 10px;
+    }
+
+    header{
+        font-size: 12px;
+        width: 100vh;
+    }
+
+    h2{
+        font-size: 12px;
+    }
+
+    main {
+        width: 100vh;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 50vh);
+        grid-template-rows: repeat(4, 40vh);
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(1, 60vh);
+        grid-template-rows: repeat(2, 60vh);
+        gap: 20px;
+        justify-content: center;
     }
 }
 
 
 
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 481px) and (max-width: 768px){
     .galeria{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 75px 400px);
+        grid-template-rows: 1fr 1fr;
     }
 
     nav a {
@@ -260,7 +381,7 @@ main {
     }
     
     a {
-        font-size: 10px;
+        font-size: 18px;
         text-decoration: none;
     }
 
@@ -268,20 +389,49 @@ main {
         color: #00bb2d;
     }
 
+
     footer div a{
-        font-size: 13px;
+        font-size: 18px;
         display:inline;
     }
 
     footer div i{
-        font-size: 20px;
+        font-size: 16px;
     }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 22;
+    }
+
+    p{
+        font-size: 22;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 80vh);
+        grid-template-rows: repeat(4, 40vh);
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(1, 80vh);
+        grid-template-rows: repeat(2, 60vh);
+        gap: 20px;
+        justify-content: center;
+    }
+    
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 769px) and (max-width: 1024px){
     .galeria{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1, 70px 400px);
+        grid-template-rows: 1fr 1fr;
     }
 
     nav {
@@ -300,7 +450,7 @@ main {
     }
     
     a{
-        font-size: 14px;
+        font-size: 11px;
         text-decoration: none;
     }
 
@@ -309,7 +459,90 @@ main {
     }
 
     footer div a{
-        font-size: 22px;
+        font-size: 30px;
         display:inline;
+    }
+
+    footer div i{
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    p{
+        font-size: 34px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50vh);
+        grid-template-rows: repeat(2, 40vh);
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 60vh);
+        grid-template-rows: repeat(1, 60vh);
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .galeria{
+        grid-template-rows: auto auto;
+    }
+
+    nav {
+        background-color: grey;
+    }
+
+    nav a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        border-radius: 15px;
+        display:inline;
+    }
+    
+    a{
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: #00bb2d;
+    }
+
+    footer div a{
+        font-size: 30px;
+        display:inline;
+    }
+
+    footer div i{
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    p{
+        font-size: 34px;
     }
 }
